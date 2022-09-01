@@ -39,8 +39,8 @@ async def crypto_price():
         channel = bot.get_channel(1014304744270991440)
         message = await channel.fetch_message(1014684709760016424) # Message ID
         await message.edit(content=f'**BTC:** ${btcprice} | **ETH:** ${ethprice} | **DOGE:** ${dogeprice} | **LTC:** ${liteprice} | **ADA:** ${cardanoprice} | **BNB:** ${bnbprice} | **XRP:** ${xrpprice} | **SHIB:** ${shibaprice} | **SOL:** ${solanaprice}')
-        await sleep(30)
-
+        await sleep(60)
+        print("message edited")
 @bot.event
 async def on_ready():
     print('Bot is ready!')
